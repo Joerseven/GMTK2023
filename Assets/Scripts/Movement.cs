@@ -56,6 +56,12 @@ public class MoveQueueItem : IQueueItem
 public class Movement : MonoBehaviour
 {
     public Grid thisgrid;
+    public MovementSpaces spaces;
+
+    private void Start()
+    {
+        thisgrid = GetComponentInParent<Grid>();
+    }
     public void SnapTo(int x, int y)
     {
         transform.position = thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0));
@@ -63,8 +69,12 @@ public class Movement : MonoBehaviour
 
     public MoveQueueItem MoveTo(int x, int y)
     {
-        
-        return new MoveQueueItem(transform, thisgrid.GetCellCenterWorld(new Vector3Int(x, y, 0)), 1);
+        return new MoveQueueItem(transform, thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0)), 1);
+    }
+
+    public Vector3Int GetPosition()
+    {
+        return thisgrid.LocalToCell(transform.position);
     }
 
     void LoadLevel()
