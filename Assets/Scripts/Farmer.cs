@@ -63,13 +63,23 @@ public class Farmer : MonoBehaviour, ITurnTaker
         }
 
         var currentPos = farmerMovement.GetPosition();
-        
+        var space = farmerMovement.spaces.CheckGrid(currentPos.x + x, currentPos.y + y);
 
-        return new IQueueItem[] { farmerMovement.MoveTo(currentPos.x + x, currentPos.y + y) };
+        if (!space.HasItem()) return new IQueueItem[] { farmerMovement.MoveTo(currentPos.x + x, currentPos.y + y) };
+
+        var thing = space.GetItem();
+
+        if (thing.TryGetComponent<Mole>(out Mole mole))
+        {
+            return new IQueueItem[] { Attack(mole) };
+        }
+
+        return new IQueueItem[] { new EmptyItem() };
     }
 
-    IQueueItem Attack()
+    IQueueItem Attack(Mole mole)
     {
+        print("Wack da mole");
         return new EmptyItem();
     }
 

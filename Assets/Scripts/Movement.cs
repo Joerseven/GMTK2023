@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
     public MoveQueueItem MoveTo(int x, int y)
     {
         spaces.NewPlace(gameObject, x, y);
-        return new MoveQueueItem(transform, thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0)), 1);
+        return new MoveQueueItem(transform, thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0)), 3);
     }
 
     public Vector3Int GetPosition()
