@@ -57,9 +57,23 @@ public class RetreatItem : IQueueItem
 
 public class Mole : MonoBehaviour, ITurnTaker
 {
-    private bool aboveground = false;
+    public bool aboveground = false;
     [SerializeField]
-    private int popupCounter = 3;
+    private int _counter;
+    public TextMesh textLabel;
+    public int popupCounter {
+        get
+        {
+            return _counter;
+        }
+
+        set
+        {
+            _counter = value;
+            textLabel.text = value.ToString();
+        }
+    }
+    public int popupTracker;
     private Animator animator;
     public IQueueItem[] TakeTurn()
     {
@@ -72,10 +86,11 @@ public class Mole : MonoBehaviour, ITurnTaker
             {
                 aboveground = true;
                 print("Coming up");
+                GetComponent<SpriteRenderer>().enabled = true;
                 return new IQueueItem[] { new PopupItem(animator) };
             }
 
-            popupCounter = 3;
+            popupCounter = popupTracker;
             aboveground = false;
             print("Going Down");
             return new IQueueItem[] { new RetreatItem(animator) };
@@ -84,6 +99,10 @@ public class Mole : MonoBehaviour, ITurnTaker
 
         print("Staying down!");
         return new IQueueItem[] { new EmptyItem() };
+    }
+
+    private void Popup()
+    {
     }
 
     public bool ShouldChase()
@@ -101,6 +120,16 @@ public class Mole : MonoBehaviour, ITurnTaker
     {
         animator.speed = 1;
         animator.Play("Mole_Idle_a");
+        popupCounter = popupTracker;
+    }
+
+
+    public void StartTurns()
+    {
+        animator.Play("Mole_Up_a");
+        animator.speed = 0;
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
     }
 
     // Update is called once per frame

@@ -5,37 +5,75 @@ using UnityEngine;
 
 public class GridInfo
 {
-    GameObject item;
+    Farmer farmer;
+    Mole mole;
+    GameObject terrain;
 
     public GridInfo()
     {
-        item = null;
-    }
-
-    public GridInfo(GameObject thing)
-    {
-        item = thing;
+        farmer = null;
+        mole = null;
+        terrain = null;
     }
 
     public bool HasItem()
     {
-        if (item == null) return false;
+        if (farmer == null && mole == null && terrain == null) return false;
         return true;
     }
 
     public GameObject GetItem()
     {
-        return item;
+        if (farmer != null) return farmer.gameObject;
+        else if (mole != null) return mole.gameObject;
+        else if (terrain != null) return terrain;
+        else return null;
     }
 
     public void SetItem(GameObject thing)
     {
-        item = thing;
+        if (thing.TryGetComponent<Mole>(out var m))
+        {
+            mole = m;
+        }
+
+        if (thing.TryGetComponent<Farmer>(out var f))
+        {
+            farmer = f;
+        }
     }
 
-    public void ClearItem()
+    public void ClearItem(GameObject thing)
     {
-        item = null;
+        if (thing.TryGetComponent<Farmer>(out var f))
+        {
+            if (farmer == f)
+            {
+                farmer = null;
+            }
+        } 
+        
+        else if (thing.TryGetComponent<Mole>(out var m)) {
+            if (mole == m)
+            {
+                mole = null;
+            }
+        }
+        
+        else if (thing == terrain)
+        {
+            terrain = null;
+        }
+    }
+
+    public GameObject GetTerrain()
+    {
+        return terrain;
+    }
+
+    public Mole GetMole()
+    {
+        return mole;
     }
 
 }
@@ -136,7 +174,7 @@ public class MovementSpaces : MonoBehaviour
                 if (!grid[i, j].HasItem()) continue;
                 if (grid[i, j].GetItem() == thing)
                 {
-                    grid[i, j].ClearItem();
+                    grid[i, j].ClearItem(thing);
                 }
             }
         }

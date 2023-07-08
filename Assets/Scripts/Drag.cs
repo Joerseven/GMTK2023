@@ -14,7 +14,6 @@ public class Drag : MonoBehaviour
         isDragging = true;
         mouseOffset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spaces.DeShelfMole(GetComponent<Mole>());
-        print("Boom");
     }
 
     private void OnMouseUp()

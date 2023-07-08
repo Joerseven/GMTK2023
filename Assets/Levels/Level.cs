@@ -6,5 +6,5 @@ using UnityEngine;
 public class Level : ScriptableObject
 {
     public Vector2Int FarmerStart;
-    public List<Vector2Int> MolesStart;
+    public List<int> MolesStart;
 }

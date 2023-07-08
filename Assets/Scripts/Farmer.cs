@@ -65,6 +65,9 @@ public class Farmer : MonoBehaviour, ITurnTaker
         var currentPos = farmerMovement.GetPosition();
         var space = farmerMovement.spaces.CheckGrid(currentPos.x + x, currentPos.y + y);
 
+        if (!CheckWalkable(space)) return new IQueueItem[] { new EmptyItem() };
+
+
         if (!space.HasItem()) return new IQueueItem[] { farmerMovement.MoveTo(currentPos.x + x, currentPos.y + y) };
 
         var thing = space.GetItem();
@@ -75,6 +78,13 @@ public class Farmer : MonoBehaviour, ITurnTaker
         }
 
         return new IQueueItem[] { new EmptyItem() };
+    }
+
+    bool CheckWalkable(GridInfo space)
+    {
+        if (space.GetTerrain() != null) return false;
+        if (space.GetMole().aboveground) return false;
+        return true;
     }
 
     IQueueItem Attack(Mole mole)

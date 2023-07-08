@@ -45,8 +45,10 @@ public class GameLoop : MonoBehaviour
             if (i < level.MolesStart.Count)
             {
                 m.gameObject.SetActive(true);
+                m.popupTracker = level.MolesStart[i];
                 m.GetComponent<Collider2D>().enabled = true;
                 m.BeginLevel();
+
                 moles.Add(molePool[i]);
                 GetComponent<MovementSpaces>().ShelfMole(m);
             }
@@ -72,7 +74,7 @@ public class GameLoop : MonoBehaviour
 
         foreach (var m in moles)
         {
-            m.GetComponent<Collider2D>().enabled = false;
+            m.StartTurns();
         }
 
 
