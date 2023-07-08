@@ -49,7 +49,7 @@ public class GameLoop : MonoBehaviour
         //Farmer
         var farmerPos = farmer.GetComponent<Movement>();
         farmerPos.SnapTo(level.FarmerStart.x, level.FarmerStart.y);
-        turns.Enqueue(farmer.GetComponent<Farmer>());
+        turns.Enqueue(farmer);
 
     }
 

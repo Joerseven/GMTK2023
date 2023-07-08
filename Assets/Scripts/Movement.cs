@@ -61,14 +61,17 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         thisgrid = GetComponentInParent<Grid>();
+        spaces = GetComponentInParent<MovementSpaces>();
     }
     public void SnapTo(int x, int y)
     {
+        spaces.NewPlace(this.gameObject, x, y);
         transform.position = thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0));
     }
 
     public MoveQueueItem MoveTo(int x, int y)
     {
+        spaces.NewPlace(gameObject, x, y);
         return new MoveQueueItem(transform, thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0)), 1);
     }
 

@@ -6,14 +6,35 @@ public class GridInfo
 {
     GameObject item;
 
-    GridInfo()
+    public GridInfo()
     {
         item = null;
     }
 
-    GridInfo(GameObject thing)
+    public GridInfo(GameObject thing)
     {
         item = thing;
+    }
+
+    public bool HasItem()
+    {
+        if (item == null) return false;
+        return true;
+    }
+
+    public GameObject GetItem()
+    {
+        return item;
+    }
+
+    public void SetItem(GameObject thing)
+    {
+        item = thing;
+    }
+
+    public void ClearItem()
+    {
+        item = null;
     }
 
 }
@@ -21,11 +42,42 @@ public class GridInfo
 public class MovementSpaces : MonoBehaviour
 {
     GridInfo[,] grid;
-    
+
+    void Awake()
+    {
+        grid = new GridInfo[8, 5];
+        for (int i = 0; i < grid.GetLength(0); i++)
+            for (int j = 0; j < grid.GetLength(1); j++)
+                grid[i, j] = new GridInfo();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        grid = new GridInfo[4, 4];
+        
+    }
+
+    public GridInfo CheckGrid(int x, int y)
+    {
+        return grid[x,y];
+    }
+
+    public void NewPlace(GameObject thing, int x, int y)
+    {
+
+        for (int i = 0; i < grid.GetLength(0); i++)
+        {
+            for (int j = 0; j < grid.GetLength(1); j++)
+            {
+                if (!grid[i, j].HasItem()) continue;
+                if (grid[i, j].GetItem() == thing)
+                {
+                    grid[i, j].ClearItem();
+                }
+            }
+        }
+
+        grid[x, y].SetItem(thing);
     }
 
     // Update is called once per frame

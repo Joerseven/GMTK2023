@@ -148,6 +148,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 204381234}
     m_Modifications:
     - target: {fileID: 663870794372756376, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
+      propertyPath: spaces
+      value: 
+      objectReference: {fileID: 204381235}
+    - target: {fileID: 663870794372756376, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
       propertyPath: thisgrid
       value: 
       objectReference: {fileID: 204381233}
@@ -198,10 +202,6 @@ PrefabInstance:
     - target: {fileID: 4320399782933989472, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
       propertyPath: m_Name
       value: Tom
-      objectReference: {fileID: 0}
-    - target: {fileID: 4320399782933989472, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -353,11 +353,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_AssetsPPU: 40
-  m_RefResolutionX: 560
-  m_RefResolutionY: 280
-  m_CropFrame: 2
+  m_RefResolutionX: 320
+  m_RefResolutionY: 200
+  m_CropFrame: 0
   m_GridSnapping: 2
-  m_FilterMode: 0
+  m_FilterMode: 1
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -442,15 +442,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.0006901311
+    y: 0.00269179
+    width: 0.9979296
+    height: 0.9932705
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 2.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -508,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172654732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.88, y: 0.02, z: 0}
+  m_LocalPosition: {x: 3.8, y: -0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -658,10 +658,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meredith
       objectReference: {fileID: 0}
-    - target: {fileID: 4320399782933989472, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -747,10 +743,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Borris
       objectReference: {fileID: 0}
-    - target: {fileID: 4320399782933989472, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -819,10 +811,6 @@ PrefabInstance:
     - target: {fileID: 4320399782933989472, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
       propertyPath: m_Name
       value: Jerry
-      objectReference: {fileID: 0}
-    - target: {fileID: 4320399782933989472, guid: 9daf46dd0511ee948b3aeda291ef73e9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
