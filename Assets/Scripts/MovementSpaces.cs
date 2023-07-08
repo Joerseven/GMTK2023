@@ -76,6 +76,11 @@ public class GridInfo
         return mole;
     }
 
+    public Farmer GetFarmer()
+    {
+        return farmer;
+    }
+
 }
 
 public class MovementSpaces : MonoBehaviour
@@ -84,6 +89,11 @@ public class MovementSpaces : MonoBehaviour
     Mole[] shelf;
 
     void Awake()
+    {
+       
+    }
+
+    public void BeginLevel()
     {
         int columns = 8;
         int rows = 5;
@@ -161,7 +171,6 @@ public class MovementSpaces : MonoBehaviour
         if (x < 0 || x >= grid.GetLength(0)) return false;
         if (y < 0 || y >= grid.GetLength(1)) return false;
         if (grid[x, y].GetItem() != null) return false;
-        print("Yay");
         return true;
     }
 

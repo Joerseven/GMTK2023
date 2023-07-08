@@ -13,19 +13,22 @@ public class MoveQueueItem : IQueueItem
     float elapsed;
     float totaltime;
     bool finished;
+    Animator animator;
 
-    public MoveQueueItem(Transform item, Vector3 to, float time)
+    public MoveQueueItem(Transform item, Vector3 to, float time, Animator anim)
     {
         elapsed = 0;
         totaltime = time;
         finished = false;
         target = to;
         subject = item;
+        animator = anim;
     }
 
     private void Start()
     {
         start = subject.position;
+        animator.Play("Farmer_Walk");
     }
 
     public bool IsFinished()
@@ -35,6 +38,10 @@ public class MoveQueueItem : IQueueItem
 
     public void Update(float dt)
     {
+        if (finished)
+        {
+            return;
+        }
 
         if (elapsed == 0)
         {
@@ -46,6 +53,7 @@ public class MoveQueueItem : IQueueItem
         if (elapsed >= totaltime)
         {
             finished = true;
+            animator.Play("Farmer_Idle");
             elapsed = totaltime;
         }
 
@@ -69,10 +77,10 @@ public class Movement : MonoBehaviour
         transform.position = thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0));
     }
 
-    public MoveQueueItem MoveTo(int x, int y)
+    public MoveQueueItem MoveTo(int x, int y, Animator anim)
     {
         spaces.NewPlace(gameObject, x, y);
-        return new MoveQueueItem(transform, thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0)), 3);
+        return new MoveQueueItem(transform, thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0)), 3, anim);
     }
 
     public Vector3Int GetPosition()

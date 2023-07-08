@@ -57,7 +57,7 @@ public class RetreatItem : IQueueItem
 
 public class Mole : MonoBehaviour, ITurnTaker
 {
-    public bool aboveground = false;
+    public bool aboveground;
     [SerializeField]
     private int _counter;
     public TextMesh textLabel;
@@ -78,31 +78,58 @@ public class Mole : MonoBehaviour, ITurnTaker
     public IQueueItem[] TakeTurn()
     {
 
-        if (!aboveground) popupCounter -= 1;
+        if (!aboveground)
+        {
+            popupCounter -= 1;
+        }
 
         if (popupCounter == 0)
         {
             if (!aboveground)
             {
-                aboveground = true;
-                print("Coming up");
-                GetComponent<SpriteRenderer>().enabled = true;
-                return new IQueueItem[] { new PopupItem(animator) };
+                return Popup();
             }
 
-            popupCounter = popupTracker;
-            aboveground = false;
-            print("Going Down");
-            return new IQueueItem[] { new RetreatItem(animator) };
-
+            return Retract();
         }
 
-        print("Staying down!");
         return new IQueueItem[] { new EmptyItem() };
     }
 
-    private void Popup()
+    IQueueItem[] Popup()
     {
+        aboveground = true;
+        GetComponent<SpriteRenderer>().enabled = true;
+        popupCounter = popupTracker;
+
+        var farmer = CheckFarmer();
+        if (farmer != null)
+        {
+            farmer.Kill();
+            return new IQueueItem[] { new EmptyItem() };
+        }  else
+        {
+            return new IQueueItem[] { new PopupItem(animator) };
+        }
+    }
+
+    IQueueItem[] Retract()
+    {
+        aboveground = false;
+        popupCounter = popupTracker;
+        textLabel.gameObject.SetActive(true);
+        return new IQueueItem[] { new RetreatItem(animator) };
+    }
+
+
+
+    private Farmer CheckFarmer()
+    {
+        var movementInfo = GetComponent<Movement>();
+        var gridPos = movementInfo.GetPosition();
+        var onSpace = movementInfo.spaces.CheckGrid(gridPos.x, gridPos.y);
+
+        return onSpace.GetFarmer();
     }
 
     public bool ShouldChase()
@@ -120,7 +147,11 @@ public class Mole : MonoBehaviour, ITurnTaker
     {
         animator.speed = 1;
         animator.Play("Mole_Idle_a");
+        aboveground = false;
         popupCounter = popupTracker;
+
+        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<Collider2D>().enabled = true;
     }
 
 

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18ff584fd78b0814bb916d0c09633c0c, type: 3}
   m_Name: Level One
   m_EditorClassIdentifier: 
-  FarmerStart: {x: 3, y: 0}
+  FarmerStart: {x: 4, y: 3}
   MolesStart: 0100000002000000

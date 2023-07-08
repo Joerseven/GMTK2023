@@ -1,0 +1,1612 @@
+fileFormatVersion: 2
+guid: ddea6f350ec932347b435ed67c9451de
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 40
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638244465561601226
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Farmer_Ani(1)_Frame_0
+    originalName: 
+    pivot: {x: 0.7166667, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 87
+      width: 60
+      height: 78
+    spriteID: 4a7ba70c7018de44d9bc0366197f8dc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 87}
+  - name: Farmer_Ani(1)_Frame_1
+    originalName: 
+    pivot: {x: 0.7166667, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 173
+      width: 60
+      height: 78
+    spriteID: 9ee9e1c646e298a44b9fc55755e18350
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 173}
+  - name: Farmer_Ani(1)_Frame_2
+    originalName: 
+    pivot: {x: 0.7166667, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 259
+      width: 60
+      height: 78
+    spriteID: bba4aeebe804e0a41a304c3ce2660c7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 259}
+  - name: Farmer_Ani(1)_Frame_3
+    originalName: 
+    pivot: {x: 0.7166667, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 345
+      width: 60
+      height: 78
+    spriteID: 896bc4a69d2b8a043a70d30443b4f22b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 345}
+  - name: Farmer_Ani(1)_Frame_4
+    originalName: 
+    pivot: {x: 0.7166667, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 431
+      width: 60
+      height: 78
+    spriteID: 8e10e9a9fea0ce74aaf68779bbb56a9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 431}
+  - name: Farmer_Ani(1)_Frame_5
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013157896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 4
+      width: 60
+      height: 76
+    spriteID: d383b53eb7caf854da31d2ac0f43834c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 4}
+  - name: Farmer_Ani(1)_Frame_6
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013157896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 88
+      width: 60
+      height: 76
+    spriteID: 15255b7de0da25f4985232fef34ba587
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 88}
+  - name: Farmer_Ani(1)_Frame_7
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 424
+      width: 60
+      height: 75
+    spriteID: fb3a1aaa3eff72343bec25182f76894e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 424}
+  - name: Farmer_Ani(1)_Frame_8
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 507
+      width: 60
+      height: 75
+    spriteID: f37bc74b9bdf5fc4ab2132f6286e7395
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 507}
+  - name: Farmer_Ani(1)_Frame_9
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013157896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 172
+      width: 60
+      height: 76
+    spriteID: dcec19d2f48e9a248ae94cbcf2d629ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 172}
+  - name: Farmer_Ani(1)_Frame_10
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013157896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 256
+      width: 60
+      height: 76
+    spriteID: 8060174a5052ab649892739f64ddb129
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 256}
+  - name: Farmer_Ani(1)_Frame_11
+    originalName: 
+    pivot: {x: 0.73333335, y: -0.013157896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 340
+      width: 60
+      height: 76
+    spriteID: bb921bfb681c31841b82603fd3d4eb95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 340}
+  - name: Farmer_Ani(1)_Frame_12
+    originalName: 
+    pivot: {x: 0.67241377, y: -0.01388889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 590
+      width: 58
+      height: 72
+    spriteID: a84b6d0667f83774dbb84b496852c7f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 590}
+  - name: Farmer_Ani(1)_Frame_13
+    originalName: 
+    pivot: {x: 0.67241377, y: -0.01388889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 670
+      width: 58
+      height: 72
+    spriteID: 9d61840268732d447b9731f0b909c15d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 670}
+  - name: Farmer_Ani(1)_Frame_14
+    originalName: 
+    pivot: {x: 0.7, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 517
+      width: 60
+      height: 78
+    spriteID: dd3e5859580e67b4d89a7cbc6fd4c577
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 517}
+  - name: Farmer_Ani(1)_Frame_15
+    originalName: 
+    pivot: {x: 0.7, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 603
+      width: 60
+      height: 78
+    spriteID: 08294690ab9effd4594a9be37ebcb543
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 603}
+  - name: Farmer_Ani(1)_Frame_16
+    originalName: 
+    pivot: {x: 0.67241377, y: -0.01388889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 750
+      width: 58
+      height: 72
+    spriteID: 97194a2d7c2956a419e967231461d2dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 750}
+  - name: Farmer_Ani(1)_Frame_17
+    originalName: 
+    pivot: {x: 0.67241377, y: -0.01388889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 830
+      width: 58
+      height: 72
+    spriteID: d3a1472ed4035cb43a4f87b59450dbc1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 109, y: 830}
+  - name: Farmer_Ani(1)_Frame_18
+    originalName: 
+    pivot: {x: 0.7, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 689
+      width: 60
+      height: 78
+    spriteID: 419211f4b3d5a134fba5a5f2727eb08a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 689}
+  - name: Farmer_Ani(1)_Frame_19
+    originalName: 
+    pivot: {x: 0.7, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 775
+      width: 60
+      height: 78
+    spriteID: dde16723e82977d4c9b562d3f6592dba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 775}
+  - name: Farmer_Ani(1)_Frame_20
+    originalName: 
+    pivot: {x: 0.7166667, y: -0.012820514}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 861
+      width: 60
+      height: 78
+    spriteID: 56b411bb66277de42ab839ad65ba7a7c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 861}
+  - name: Farmer_Ani(1)_Frame_21
+    originalName: 
+    pivot: {x: 0.7101449, y: -0.016393444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 947
+      width: 69
+      height: 61
+    spriteID: 654b8d7e5493a324db4d374002deb314
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 947}
+  - name: Farmer_Ani(1)_Frame_22
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 4
+      width: 76
+      height: 50
+    spriteID: 7673f117b544d9d46bd8d71bf9e1fd18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 4}
+  - name: Farmer_Ani(1)_Frame_23
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 62
+      width: 76
+      height: 50
+    spriteID: edc764611271a97478fd74174d201455
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 62}
+  - name: Farmer_Ani(1)_Frame_24
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 120
+      width: 76
+      height: 50
+    spriteID: d7805b005f4b97245b7c35a9903ad364
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 120}
+  - name: Farmer_Ani(1)_Frame_25
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 352
+      width: 76
+      height: 49
+    spriteID: b77c30327f9552f4cb49d865afd916fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 352}
+  - name: Farmer_Ani(1)_Frame_26
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 409
+      width: 76
+      height: 49
+    spriteID: 5cab5a0ae732fab4ba6cccb102d84b26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 409}
+  - name: Farmer_Ani(1)_Frame_27
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020408165}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 466
+      width: 76
+      height: 49
+    spriteID: d7090ebf822d7484db2d896e77db1196
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 466}
+  - name: Farmer_Ani(1)_Frame_28
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 178
+      width: 76
+      height: 50
+    spriteID: 6a3d20c7766fff543b8f52a1894fdc20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 178}
+  - name: Farmer_Ani(1)_Frame_29
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 236
+      width: 76
+      height: 50
+    spriteID: 0e71eef88cac764478bfbc390aca8506
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 236}
+  - name: Farmer_Ani(1)_Frame_30
+    originalName: 
+    pivot: {x: 0.7763158, y: -0.020000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 294
+      width: 76
+      height: 50
+    spriteID: f97c8913c423dca42a69d1ec4d87fa40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 294}
+  - name: Farmer_Ani(1)_Frame_31
+    originalName: 
+    pivot: {x: 0.7375, y: -0.022727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 4
+      width: 80
+      height: 44
+    spriteID: b05c4a296fdaaaf4b84783f9a6a87486
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 4}
+  - name: Farmer_Ani(1)_Frame_32
+    originalName: 
+    pivot: {x: 0.72839504, y: -0.025641028}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 4
+      width: 81
+      height: 39
+    spriteID: b9b93a7f8e475a142b9f0eddb3396df2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 4}
+  - name: Farmer_Ani(1)_Frame_33
+    originalName: 
+    pivot: {x: 0.72839504, y: -0.025641028}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 349
+      y: 51
+      width: 81
+      height: 39
+    spriteID: e2f701f27a8cc4c43925972fb7565ab1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 349, y: 51}
+  - name: Farmer_Ani(1)_Frame_34
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.09090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 280
+      width: 70
+      height: 44
+    spriteID: 43ded060af7210a408b8200b4207fbdc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 280}
+  - name: Farmer_Ani(1)_Frame_35
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.078431375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 523
+      width: 70
+      height: 51
+    spriteID: 8fe36aa85cde4234197b85bc42d5e6f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 523}
+  - name: Farmer_Ani(1)_Frame_36
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.078431375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 582
+      width: 70
+      height: 51
+    spriteID: 4de6ebb4920390d4c81f59f714a6d49c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 582}
+  - name: Farmer_Ani(1)_Frame_37
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 759
+      width: 70
+      height: 49
+    spriteID: cd8a4f1fe240275459fbc40491706b26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 759}
+  - name: Farmer_Ani(1)_Frame_38
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 816
+      width: 70
+      height: 49
+    spriteID: 7bc2ffc9fcda54344ad7bd2119855de6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 816}
+  - name: Farmer_Ani(1)_Frame_39
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 873
+      width: 70
+      height: 49
+    spriteID: 2d870491bd1f1ce4ba9a22bdd2b74509
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 873}
+  - name: Farmer_Ani(1)_Frame_40
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.078431375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 641
+      width: 70
+      height: 51
+    spriteID: 3255e75b8b640764590ba05fe57bd82a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 641}
+  - name: Farmer_Ani(1)_Frame_41
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.078431375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 700
+      width: 70
+      height: 51
+    spriteID: 9beb5de321576a540826c79418523398
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 700}
+  - name: Farmer_Ani(1)_Frame_42
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 930
+      width: 70
+      height: 49
+    spriteID: e46c95ed4c295c9479963c49773c36b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 930}
+  - name: Farmer_Ani(1)_Frame_43
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 56
+      width: 70
+      height: 49
+    spriteID: c1de4f57b547bb34f987fa4a3615ed00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 56}
+  - name: Farmer_Ani(1)_Frame_44
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 113
+      width: 70
+      height: 49
+    spriteID: 9ea6293e5da9b134cb1d88f3025c2e92
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 113}
+  - name: Farmer_Ani(1)_Frame_45
+    originalName: 
+    pivot: {x: 0.8428572, y: -0.08163266}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 170
+      width: 70
+      height: 49
+    spriteID: 884591bf01f249f4c88ef9ad53caa695
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 170}
+  - name: Farmer_Ani(1)_Frame_46
+    originalName: 
+    pivot: {x: 0.47422677, y: -0.06666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 97
+      height: 75
+    spriteID: 856f251ea01724f4faa0c42b763a5535
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Farmer_Ani(1)_Frame_47
+    originalName: 
+    pivot: {x: 0.18309857, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 227
+      width: 71
+      height: 45
+    spriteID: c43d081a124dd2646bf2f9d3a2464fdb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 227}
+  - name: Farmer_Ani(1)_Frame_48
+    originalName: 
+    pivot: {x: 0.06349206, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 432
+      width: 63
+      height: 42
+    spriteID: 7c28b659484a7554181fc8ef77c87957
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 432}
+  - name: Farmer_Ani(1)_Frame_49
+    originalName: 
+    pivot: {x: 0.062499996, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 332
+      width: 64
+      height: 42
+    spriteID: 15fd9a2d39ad5324dbaa6f228c30ff0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 332}
+  - name: Farmer_Ani(1)_Frame_50
+    originalName: 
+    pivot: {x: 0.062499996, y: -0.11904762}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 261
+      y: 382
+      width: 64
+      height: 42
+    spriteID: d6f6f274898bd9b4eb3c2eeffb263ebe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 261, y: 382}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1379668874
+    name: Farmer_Ani(1)
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Farmer_Ani(1)_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 17
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 4a7ba70c7018de44d9bc0366197f8dc9
+    - name: Farmer_Ani(1)_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 17
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 9ee9e1c646e298a44b9fc55755e18350
+    - name: Farmer_Ani(1)_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 17
+        y: 1
+        width: 60
+        height: 78
+      spriteId: bba4aeebe804e0a41a304c3ce2660c7e
+    - name: Farmer_Ani(1)_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 17
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 896bc4a69d2b8a043a70d30443b4f22b
+    - name: Farmer_Ani(1)_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 17
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 8e10e9a9fea0ce74aaf68779bbb56a9a
+    - name: Farmer_Ani(1)_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 76
+      spriteId: d383b53eb7caf854da31d2ac0f43834c
+    - name: Farmer_Ani(1)_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 76
+      spriteId: 15255b7de0da25f4985232fef34ba587
+    - name: Farmer_Ani(1)_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 75
+      spriteId: fb3a1aaa3eff72343bec25182f76894e
+    - name: Farmer_Ani(1)_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 75
+      spriteId: f37bc74b9bdf5fc4ab2132f6286e7395
+    - name: Farmer_Ani(1)_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 76
+      spriteId: dcec19d2f48e9a248ae94cbcf2d629ff
+    - name: Farmer_Ani(1)_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 76
+      spriteId: 8060174a5052ab649892739f64ddb129
+    - name: Farmer_Ani(1)_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 16
+        y: 1
+        width: 60
+        height: 76
+      spriteId: bb921bfb681c31841b82603fd3d4eb95
+    - name: Farmer_Ani(1)_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 21
+        y: 1
+        width: 58
+        height: 72
+      spriteId: a84b6d0667f83774dbb84b496852c7f7
+    - name: Farmer_Ani(1)_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 21
+        y: 1
+        width: 58
+        height: 72
+      spriteId: 9d61840268732d447b9731f0b909c15d
+    - name: Farmer_Ani(1)_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 18
+        y: 1
+        width: 60
+        height: 78
+      spriteId: dd3e5859580e67b4d89a7cbc6fd4c577
+    - name: Farmer_Ani(1)_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 18
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 08294690ab9effd4594a9be37ebcb543
+    - name: Farmer_Ani(1)_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 21
+        y: 1
+        width: 58
+        height: 72
+      spriteId: 97194a2d7c2956a419e967231461d2dd
+    - name: Farmer_Ani(1)_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 21
+        y: 1
+        width: 58
+        height: 72
+      spriteId: d3a1472ed4035cb43a4f87b59450dbc1
+    - name: Farmer_Ani(1)_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 18
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 419211f4b3d5a134fba5a5f2727eb08a
+    - name: Farmer_Ani(1)_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 18
+        y: 1
+        width: 60
+        height: 78
+      spriteId: dde16723e82977d4c9b562d3f6592dba
+    - name: Farmer_Ani(1)_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 17
+        y: 1
+        width: 60
+        height: 78
+      spriteId: 56b411bb66277de42ab839ad65ba7a7c
+    - name: Farmer_Ani(1)_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 11
+        y: 1
+        width: 69
+        height: 61
+      spriteId: 654b8d7e5493a324db4d374002deb314
+    - name: Farmer_Ani(1)_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 50
+      spriteId: 7673f117b544d9d46bd8d71bf9e1fd18
+    - name: Farmer_Ani(1)_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 50
+      spriteId: edc764611271a97478fd74174d201455
+    - name: Farmer_Ani(1)_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 50
+      spriteId: d7805b005f4b97245b7c35a9903ad364
+    - name: Farmer_Ani(1)_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 49
+      spriteId: b77c30327f9552f4cb49d865afd916fd
+    - name: Farmer_Ani(1)_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 49
+      spriteId: 5cab5a0ae732fab4ba6cccb102d84b26
+    - name: Farmer_Ani(1)_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 49
+      spriteId: d7090ebf822d7484db2d896e77db1196
+    - name: Farmer_Ani(1)_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 50
+      spriteId: 6a3d20c7766fff543b8f52a1894fdc20
+    - name: Farmer_Ani(1)_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 50
+      spriteId: 0e71eef88cac764478bfbc390aca8506
+    - name: Farmer_Ani(1)_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 1
+        y: 1
+        width: 76
+        height: 50
+      spriteId: f97c8913c423dca42a69d1ec4d87fa40
+    - name: Farmer_Ani(1)_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 1
+        y: 1
+        width: 80
+        height: 44
+      spriteId: b05c4a296fdaaaf4b84783f9a6a87486
+    - name: Farmer_Ani(1)_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 1
+        y: 1
+        width: 81
+        height: 39
+      spriteId: b9b93a7f8e475a142b9f0eddb3396df2
+    - name: Farmer_Ani(1)_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 1
+        y: 1
+        width: 81
+        height: 39
+      spriteId: e2f701f27a8cc4c43925972fb7565ab1
+    - name: Farmer_Ani(1)_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 44
+      spriteId: 43ded060af7210a408b8200b4207fbdc
+    - name: Farmer_Ani(1)_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 51
+      spriteId: 8fe36aa85cde4234197b85bc42d5e6f0
+    - name: Farmer_Ani(1)_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 51
+      spriteId: 4de6ebb4920390d4c81f59f714a6d49c
+    - name: Farmer_Ani(1)_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: cd8a4f1fe240275459fbc40491706b26
+    - name: Farmer_Ani(1)_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: 7bc2ffc9fcda54344ad7bd2119855de6
+    - name: Farmer_Ani(1)_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: 2d870491bd1f1ce4ba9a22bdd2b74509
+    - name: Farmer_Ani(1)_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 51
+      spriteId: 3255e75b8b640764590ba05fe57bd82a
+    - name: Farmer_Ani(1)_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 51
+      spriteId: 9beb5de321576a540826c79418523398
+    - name: Farmer_Ani(1)_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: e46c95ed4c295c9479963c49773c36b1
+    - name: Farmer_Ani(1)_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: c1de4f57b547bb34f987fa4a3615ed00
+    - name: Farmer_Ani(1)_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: 9ea6293e5da9b134cb1d88f3025c2e92
+    - name: Farmer_Ani(1)_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 1
+        y: 4
+        width: 70
+        height: 49
+      spriteId: 884591bf01f249f4c88ef9ad53caa695
+    - name: Farmer_Ani(1)_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 14
+        y: 5
+        width: 97
+        height: 75
+      spriteId: 856f251ea01724f4faa0c42b763a5535
+    - name: Farmer_Ani(1)_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 47
+        y: 5
+        width: 71
+        height: 45
+      spriteId: c43d081a124dd2646bf2f9d3a2464fdb
+    - name: Farmer_Ani(1)_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 56
+        y: 5
+        width: 63
+        height: 42
+      spriteId: 7c28b659484a7554181fc8ef77c87957
+    - name: Farmer_Ani(1)_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 56
+        y: 5
+        width: 64
+        height: 42
+      spriteId: 15fd9a2d39ad5324dbaa6f228c30ff0d
+    - name: Farmer_Ani(1)_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 56
+        y: 5
+        width: 64
+        height: 42
+      spriteId: d6f6f274898bd9b4eb3c2eeffb263ebe
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 120, y: 80}

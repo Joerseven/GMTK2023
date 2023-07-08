@@ -20,6 +20,10 @@ public class GameLoop : MonoBehaviour
     public Farmer farmer;
     public List<Mole> moles;
 
+    public RetryScreen retryscreen;
+    public NextLevel nextscreen;
+    public GameObject victoryscreen;
+
     // Start is called before the first frame update
 
 
@@ -30,11 +34,16 @@ public class GameLoop : MonoBehaviour
 
     public void BeginLevel()
     {
+
+        gameObject.SetActive(true);
+
         events = new Queue<IQueueItem>();
         turns = new Queue<ITurnTaker>();
         moles = new List<Mole>();
 
         levelState = 0;
+
+        GetComponent<MovementSpaces>().BeginLevel();
 
 
         int i = 0;
@@ -63,6 +72,7 @@ public class GameLoop : MonoBehaviour
         //Farmer
         var farmerPos = farmer.GetComponent<Movement>();
         farmerPos.SnapTo(level.FarmerStart.x, level.FarmerStart.y);
+        farmer.BeginLevel();
     }
 
     public void StartTurns()
@@ -77,13 +87,12 @@ public class GameLoop : MonoBehaviour
             m.StartTurns();
         }
 
+        turns.Enqueue(farmer);
 
         foreach (var m in moles)
         {
             turns.Enqueue(m);
-            turns.Enqueue(farmer);
         }
-            
     }
 
     IQueueItem[] GetNextTurn()
@@ -106,10 +115,33 @@ public class GameLoop : MonoBehaviour
         if (current.IsFinished())
         {
             events.Dequeue();
-            this.Update();
+            UpdateQueueItems();
         }
 
         current.Update(Time.deltaTime);
+    }
+
+    void Retry()
+    {
+        gameObject.SetActive(false);
+        retryscreen.gameObject.SetActive(true);
+    }
+
+    void NextLevel()
+    {
+        currentLevel += 1;
+        gameObject.SetActive(false);
+        if (currentLevel >= levels.Count)
+        {
+            WinGame();
+            return;
+        }
+        nextscreen.gameObject.SetActive(true);
+    }
+
+    void WinGame()
+    {
+        victoryscreen.SetActive(true);
     }
 
     // Update is called once per frame
@@ -118,6 +150,16 @@ public class GameLoop : MonoBehaviour
         if (levelState == 1)
         {
             UpdateQueueItems();
+            if (farmer.hasKilled)
+            {
+                levelState = 0;
+                Retry();
+            }
+            if (farmer.isDead)
+            {
+                levelState = 0;
+                NextLevel();
+            }
         }
     }
 }
