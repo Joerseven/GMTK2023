@@ -75,6 +75,7 @@ public class Movement : MonoBehaviour
     {
         spaces.NewPlace(this.gameObject, x, y);
         transform.position = thisgrid.GetCellCenterLocal(new Vector3Int(x, y, 0));
+        GetComponent<SpriteRenderer>().sortingOrder = 4 - (int)(transform.position.y);
     }
 
     public MoveQueueItem MoveTo(int x, int y, Animator anim)

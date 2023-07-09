@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
@@ -60,7 +61,7 @@ public class Mole : MonoBehaviour, ITurnTaker
     public bool aboveground;
     [SerializeField]
     private int _counter;
-    public TextMesh textLabel;
+    public TextMeshPro textLabel;
     public int popupCounter {
         get
         {
@@ -77,11 +78,7 @@ public class Mole : MonoBehaviour, ITurnTaker
     private Animator animator;
     public IQueueItem[] TakeTurn()
     {
-
-        if (!aboveground)
-        {
-            popupCounter -= 1;
-        }
+        popupCounter -= 1;
 
         if (popupCounter == 0)
         {

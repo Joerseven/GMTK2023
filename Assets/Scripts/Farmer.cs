@@ -21,6 +21,7 @@ class EmptyItem : IQueueItem
 class AttackItem : IQueueItem
 {
     Animator animator;
+    SpriteRenderer s;
 
     public AttackItem(Animator anim)
     {
@@ -51,6 +52,7 @@ public class Farmer : MonoBehaviour, ITurnTaker
     public bool isDead;
     public bool hasKilled;
     private Animator animator;
+    private SpriteRenderer sRenderer;
     public IQueueItem[] TakeTurn()
     {
         Transform nearest = null;
@@ -76,34 +78,62 @@ public class Farmer : MonoBehaviour, ITurnTaker
         }
 
         var v = nearest.position - transform.position;
+        var currentPos = farmerMovement.GetPosition();
+
+        if (nearest.position.x > transform.position.x)
+        {
+            v -= new Vector3(1, 0, 0);
+        } else
+        {
+            v += new Vector3(1, 0, 0);
+        }
 
         if (v == Vector3.zero)
         {
+            var leftHit = farmerMovement.spaces.CheckGrid(currentPos.x + 1, currentPos.y);
+            var rightHit = farmerMovement.spaces.CheckGrid(currentPos.x - 1, currentPos.y);
+
+            if (CheckAttackable(rightHit))
+            {
+                return new IQueueItem[] { Attack(rightHit.GetMole()) };
+            }
+            if (CheckAttackable(leftHit))
+            {
+                sRenderer.flipX = true;
+                return new IQueueItem[] { Attack(leftHit.GetMole()) };
+            }
+
             return new IQueueItem[] { new EmptyItem() };
         }
 
-        int x,y;
+        int x = 0,y = 0;
 
-        if (Mathf.Abs(v.x) > Mathf.Abs(v.y))
+        if (Mathf.Abs(v.x) >= 1)
         {
             x = (int)(v.x / Mathf.Abs(v.x));
             y = 0;
-        } else
+            sRenderer.flipX = x==1;
+        }
+
+        if (Mathf.Abs(v.y) >= 1)
         {
             y = (int)(v.y / Mathf.Abs(v.y));
             x = 0;
         }
-
-        var currentPos = farmerMovement.GetPosition();
-        var space = farmerMovement.spaces.CheckGrid(currentPos.x + x, currentPos.y + y);
+        
+        var space = farmerMovement.spaces.CheckGrid(currentPos.x + x, currentPos.y + y);    
 
         if (CheckWalkable(space))
         {
+            if (x == 1)
+            {
+                sRenderer.flipX = false;
+            } else if (x == -1)
+            {
+                sRenderer.flipX = true;
+            }
             return new IQueueItem[] { farmerMovement.MoveTo(currentPos.x + x, currentPos.y + y, animator) };
         }
-
-        if (CheckAttackable(space)) return new IQueueItem[] { Attack(space.GetMole()) };
-
         return new IQueueItem[] { new EmptyItem() };
     }
 
@@ -114,9 +144,18 @@ public class Farmer : MonoBehaviour, ITurnTaker
         return true;
     }
 
-    bool CheckAttackable(GridInfo space)
+    bool CheckAttackable(GridInfo v)
     {
-        if (space.GetMole() != null && space.GetMole().aboveground) return true;
+        if (v.GetMole() != null)
+        {
+            print(v.GetMole());
+            if (v.GetMole().aboveground)
+            {
+                return true;
+            }
+        }
+        
+        
         return false;
     }
 
@@ -139,6 +178,7 @@ public class Farmer : MonoBehaviour, ITurnTaker
     void Awake()
     {
         animator = GetComponent<Animator>();
+        sRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void BeginLevel()

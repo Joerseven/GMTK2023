@@ -13,6 +13,8 @@ public class GameLoop : MonoBehaviour
     private List<Level> levels;
     [SerializeField]
     private Mole[] molePool;
+    [SerializeField]
+    private Obstacle[] obstaclePool;
     private int currentLevel = 0;
 
     private int levelState = 0;
@@ -43,11 +45,35 @@ public class GameLoop : MonoBehaviour
 
         levelState = 0;
 
-        GetComponent<MovementSpaces>().BeginLevel();
+        var spaces = GetComponent<MovementSpaces>();
+
+        spaces.BeginLevel();
 
 
         int i = 0;
         Level level = levels[currentLevel];
+
+
+        foreach (var o in obstaclePool)
+        {
+            if (i < level.Obstacles.Count)
+            {
+                o.gameObject.SetActive(true);
+                var gridSpace = spaces.CheckGrid(level.Obstacles[i].x, level.Obstacles[i].y);
+                gridSpace.SetItem(o.gameObject);
+                o.transform.position = GetComponent<Grid>().GetCellCenterLocal(new Vector3Int(level.Obstacles[i].x, level.Obstacles[i].y, 0));
+                o.GetComponent<SpriteRenderer>().sortingOrder = 4 - (int)(o.transform.position.y);
+
+            }
+            else
+            {
+                o.gameObject.SetActive(false);
+            }
+            i++;
+        }
+
+        i = 0;
+
         foreach (var m in molePool)
         {
 
@@ -68,6 +94,8 @@ public class GameLoop : MonoBehaviour
 
             i++;
         }
+
+        
 
         //Farmer
         var farmerPos = farmer.GetComponent<Movement>();

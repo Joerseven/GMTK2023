@@ -250,7 +250,7 @@ MonoBehaviour:
   moles: []
   retryscreen: {fileID: 1307584698}
   nextscreen: {fileID: 1280380178}
-  victoryscreen: {fileID: 0}
+  victoryscreen: {fileID: 376870601}
 --- !u!156049354 &204381233
 Grid:
   m_ObjectHideFlags: 0

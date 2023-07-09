@@ -7,4 +7,5 @@ public class Level : ScriptableObject
 {
     public Vector2Int FarmerStart;
     public List<int> MolesStart;
+    public List<Vector2Int> Obstacles;
 }

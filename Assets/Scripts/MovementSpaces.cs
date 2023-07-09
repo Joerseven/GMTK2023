@@ -41,6 +41,11 @@ public class GridInfo
         {
             farmer = f;
         }
+
+        if (thing.TryGetComponent<Obstacle>(out var o))
+        {
+            terrain = o.gameObject;
+        }
     }
 
     public void ClearItem(GameObject thing)

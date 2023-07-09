@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class BeginTurnsButton : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Sprite onDown;
+    public Sprite onUp;
     void OnMouseDown()
     {
         GetComponentInParent<GameLoop>().StartTurns();
+        GetComponent<SpriteRenderer>().sprite = onDown;
+    }
+
+    void OnMouseUp()
+    {
+        GetComponent<SpriteRenderer>().sprite = onUp;
     }
 }
