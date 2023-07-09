@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using TMPro;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor.ShaderGraph;
@@ -36,6 +37,7 @@ public class RetreatItem : IQueueItem
     public RetreatItem(Animator animator)
     {
         anim = animator;
+        animator.speed = 1;
         anim.Play("Mole_Down_a");
     }
     public bool IsFinished()
@@ -44,6 +46,8 @@ public class RetreatItem : IQueueItem
         var tim = stateInfo.normalizedTime;
         if (tim > 1.0f && stateInfo.IsName("Mole_Down_a"))
         {
+            anim.speed = 0;
+            anim.Play("Mole_Up_a");
             return true;
         }
 
@@ -56,12 +60,45 @@ public class RetreatItem : IQueueItem
     }
 }
 
+public class CountdownItem : IQueueItem
+{
+    bool done;
+    float elapsed;
+    float target;
+
+    public CountdownItem()
+    {
+        done = false;
+        target = 2.0f;
+        elapsed = 0.0f;
+    }
+    public bool IsFinished()
+    {
+        return done;
+    }
+
+    public void Update(float dt)
+    {
+        elapsed += dt;
+        
+        if (elapsed >= target)
+        {
+            elapsed = target;
+            done = true;
+        }
+    }
+}
+
 public class Mole : MonoBehaviour, ITurnTaker
 {
     public bool aboveground;
     [SerializeField]
     private int _counter;
     public TextMeshPro textLabel;
+    public GameObject timer;
+
+    public Material normal;
+    public Material underground;
     public int popupCounter {
         get
         {
@@ -78,6 +115,11 @@ public class Mole : MonoBehaviour, ITurnTaker
     private Animator animator;
     public IQueueItem[] TakeTurn()
     {
+        if (popupCounter == -1)
+        {
+            return new IQueueItem[] {new EmptyItem()};
+        }
+
         popupCounter -= 1;
 
         if (popupCounter == 0)
@@ -90,12 +132,13 @@ public class Mole : MonoBehaviour, ITurnTaker
             return Retract();
         }
 
-        return new IQueueItem[] { new EmptyItem() };
+        var q = new CountdownItem();
+        return new IQueueItem[] { q };
     }
 
     IQueueItem[] Popup()
     {
-        aboveground = true;
+        SetAboveGround(true);
         GetComponent<SpriteRenderer>().enabled = true;
         popupCounter = popupTracker;
 
@@ -112,10 +155,15 @@ public class Mole : MonoBehaviour, ITurnTaker
 
     IQueueItem[] Retract()
     {
-        aboveground = false;
+        SetAboveGround(false);
         popupCounter = popupTracker;
         textLabel.gameObject.SetActive(true);
         return new IQueueItem[] { new RetreatItem(animator) };
+    }
+
+    public void SetAboveGround (bool status)
+    {
+        aboveground = status;
     }
 
 
@@ -142,9 +190,16 @@ public class Mole : MonoBehaviour, ITurnTaker
 
     public void BeginLevel()
     {
-        animator.speed = 1;
-        animator.Play("Mole_Idle_a");
-        aboveground = false;
+        
+        if (aboveground)
+        {
+            animator.speed = 1;
+            animator.Play("Mole_Idle_a");
+        } else
+        {
+            animator.speed = 0;
+            animator.Play("Mole_Up_a");
+        }
         popupCounter = popupTracker;
 
         GetComponent<SpriteRenderer>().enabled = true;
@@ -154,8 +209,6 @@ public class Mole : MonoBehaviour, ITurnTaker
 
     public void StartTurns()
     {
-        animator.Play("Mole_Up_a");
-        animator.speed = 0;
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<Collider2D>().enabled = false;
     }

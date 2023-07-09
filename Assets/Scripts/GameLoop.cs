@@ -81,6 +81,7 @@ public class GameLoop : MonoBehaviour
             {
                 m.gameObject.SetActive(true);
                 m.popupTracker = level.MolesStart[i];
+                m.SetAboveGround(level.MolesGround[i]);
                 m.GetComponent<Collider2D>().enabled = true;
                 m.BeginLevel();
 

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18ff584fd78b0814bb916d0c09633c0c, type: 3}
-  m_Name: Level One
+  m_Name: Level X
   m_EditorClassIdentifier: 
   FarmerStart: {x: 5, y: 2}
-  MolesStart: 0100000002000000
-  MolesGround: 0001
+  MolesStart: 01000000
+  MolesGround: 
   Obstacles:
   - {x: 0, y: 0}
   - {x: 0, y: 1}
@@ -32,23 +32,27 @@ MonoBehaviour:
   - {x: 2, y: 3}
   - {x: 2, y: 4}
   - {x: 3, y: 0}
+  - {x: 3, y: 1}
+  - {x: 3, y: 2}
+  - {x: 3, y: 3}
   - {x: 3, y: 4}
   - {x: 4, y: 0}
+  - {x: 4, y: 1}
+  - {x: 4, y: 2}
+  - {x: 4, y: 3}
   - {x: 4, y: 4}
   - {x: 5, y: 0}
+  - {x: 5, y: 1}
+  - {x: 5, y: 2}
+  - {x: 5, y: 3}
   - {x: 5, y: 4}
   - {x: 6, y: 0}
+  - {x: 6, y: 1}
+  - {x: 6, y: 2}
+  - {x: 6, y: 3}
   - {x: 6, y: 4}
   - {x: 7, y: 0}
   - {x: 7, y: 1}
   - {x: 7, y: 2}
   - {x: 7, y: 3}
   - {x: 7, y: 4}
-  - {x: 5, y: 1}
-  - {x: 5, y: 3}
-  - {x: 6, y: 1}
-  - {x: 6, y: 3}
-  - {x: 3, y: 1}
-  - {x: 3, y: 3}
-  - {x: 4, y: 1}
-  - {x: 4, y: 3}

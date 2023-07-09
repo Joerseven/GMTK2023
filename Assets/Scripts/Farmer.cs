@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 class EmptyItem : IQueueItem
@@ -46,6 +47,66 @@ class AttackItem : IQueueItem
     }
 }
 
+public class StuckItem : IQueueItem
+{
+    bool done;
+    float elapsed;
+    float target;
+
+    public StuckItem()
+    {
+        done = false;
+        target = 2.0f;
+        elapsed = 0.0f;
+        Debug.Log("I'm stuck!");
+    }
+    public bool IsFinished()
+    {
+        return done;
+    }
+
+    public void Update(float dt)
+    {
+        elapsed += dt;
+
+        if (elapsed >= target)
+        {
+            elapsed = target;
+            done = true;
+        }
+    }
+}
+
+public class NoMole : IQueueItem
+{
+    bool done;
+    float elapsed;
+    float target;
+
+    public NoMole()
+    {
+        done = false;
+        target = 2.0f;
+        elapsed = 0.0f;
+        Debug.Log("No Mole >:(");
+    }
+    public bool IsFinished()
+    {
+        return done;
+    }
+
+    public void Update(float dt)
+    {
+        elapsed += dt;
+
+        if (elapsed >= target)
+        {
+            elapsed = target;
+            done = true;
+        }
+    }
+}
+
 public class Farmer : MonoBehaviour, ITurnTaker
 {
     public GameLoop gameloop;
@@ -74,10 +135,17 @@ public class Farmer : MonoBehaviour, ITurnTaker
 
         if (nearest == null)
         {
-            return new IQueueItem[]{ new EmptyItem() };
+            return new IQueueItem[]{ new NoMole() };
         }
 
         var v = nearest.position - transform.position;
+        if (v.x > 0)
+        {
+            sRenderer.flipX = false;
+        } else
+        {
+            sRenderer.flipX = true;
+        }
         var currentPos = farmerMovement.GetPosition();
 
         if (nearest.position.x > transform.position.x)
@@ -95,11 +163,12 @@ public class Farmer : MonoBehaviour, ITurnTaker
 
             if (CheckAttackable(rightHit))
             {
+                sRenderer.flipX = true;
                 return new IQueueItem[] { Attack(rightHit.GetMole()) };
             }
             if (CheckAttackable(leftHit))
             {
-                sRenderer.flipX = true;
+                sRenderer.flipX = false;
                 return new IQueueItem[] { Attack(leftHit.GetMole()) };
             }
 
@@ -112,7 +181,6 @@ public class Farmer : MonoBehaviour, ITurnTaker
         {
             x = (int)(v.x / Mathf.Abs(v.x));
             y = 0;
-            sRenderer.flipX = x==1;
         }
 
         if (Mathf.Abs(v.y) >= 1)
@@ -125,21 +193,16 @@ public class Farmer : MonoBehaviour, ITurnTaker
 
         if (CheckWalkable(space))
         {
-            if (x == 1)
-            {
-                sRenderer.flipX = false;
-            } else if (x == -1)
-            {
-                sRenderer.flipX = true;
-            }
             return new IQueueItem[] { farmerMovement.MoveTo(currentPos.x + x, currentPos.y + y, animator) };
         }
+
         return new IQueueItem[] { new EmptyItem() };
     }
 
     bool CheckWalkable(GridInfo space)
     {
-        if (space.GetTerrain() != null) return false;
+        // Farmer can move over wheat
+        //if (space.GetTerrain() != null) return false;
         if (space.GetMole() != null && space.GetMole().aboveground) return false;
         return true;
     }
@@ -184,6 +247,8 @@ public class Farmer : MonoBehaviour, ITurnTaker
     public void BeginLevel()
     {
         animator.Play("Farmer_Idle");
+        isDead = false;
+        hasKilled = false;
     }
 
     // Start is called before the first frame update
@@ -195,6 +260,6 @@ public class Farmer : MonoBehaviour, ITurnTaker
     // Update is called once per frame
     void Update()
     {
-        
+        sRenderer.sortingOrder = 4 - (int)(transform.position.y);
     }
 }
